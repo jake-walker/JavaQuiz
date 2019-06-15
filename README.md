@@ -15,6 +15,5 @@ All of the 'logic' for creating and managing the quiz is contained in the `src/m
 ```bash
 git clone https://github.com/jake-walker/java-quiz
 cd java-quiz
-ant build
-java 
+mvn compile
 ```
