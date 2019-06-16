@@ -1,0 +1,14 @@
+language: java
+
+before_deploy:
+  - "mvn -DskipTests package"
+  - export EXPORT_FILE=$(ls target/JavaQuiz-*.jar)
+
+deploy:
+  provider: releases
+  api_key:
+    secure: cEzm4TZ5y81eiNSQHN6U1cNxENqC2UFqM7VJFPDGu3C6PF1FYWhkkzvZLomaaDwNjEmvLaD7mirQf3GtZHdUBoOOc2fYCKCdH06S4frxmSusfuPygS1kpcc79tHd1aIRtN4nN+IFq4FUWmAfFUVbTi+q8Wi6OJ9buwfYzt2b+7o1JyCy2nTyoVETycHlKqg0P6XFobpvBF2T5cldCT0odjPeGr2T1CbUVwLf97wOnGSSZGTquQK+08EHfD+QeD04sdhJj8QxRkW8qSTMSpbETI2SYj+1k1IaQfU4gyvYW0h0/y/NhsuEvSU5ycoesS4iC3w87pqozmBlNEwC76bCPzcBKxwFjyuwzcrDOUdPvU3sNxIPIbBQOVttkhSE+DXC+IB32vZgx70JdWmpXNQlN3prq0Oq9k5gZ/170fGZKfnNPhr897gWDxz09wYa9eBE1JEXR/UFmsQ+vaC281oy1Zgrh+Z1sQVP6EoS29IRawiZZRlLCC7GxwP0HIxVNq/jBUM6tC6j6DJ2SEJsc66JyBBR5sz24HzHuWO13IBdds5thImWtnZ/Ae/jX29GsQigrAh/BLbhr8Cy7cR+uF18SR1i6qXcXGgNgp3gYFLobQ7K46PISSBE7j3bn4YbCzXwcokTfaCkFFwqhIj2/uTfO0nS2zdt12sVNIJ6UIV+sZ8=
+  file: "${EXPORT_FILE}"
+  skip_cleanup: true
+  on:
+    tags: true
