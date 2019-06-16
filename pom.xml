@@ -6,7 +6,7 @@
 
   <groupId>me.jakew.javaquiz</groupId>
   <artifactId>JavaQuiz</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <name>JavaQuiz</name>
   <url>https://github.com/jake-walker/JavaQuiz</url>
