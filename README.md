@@ -10,7 +10,13 @@ use out of the handful of APIs that I found.
 
 All of the 'logic' for creating and managing the quiz is contained in the `src/me.jakew.quiz/Quiz.java` file.
 
-## Building
+## Running
+
+Simply download the latest JAR build from the [releases page](https://github.com/jake-walker/JavaQuiz/releases) and run it.
+
+_**Note:** It may have to be run from the command line as it is a console application._ 
+
+## Building from Source
 
 ```bash
 git clone https://github.com/jake-walker/java-quiz
