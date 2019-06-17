@@ -6,7 +6,7 @@
 
   <groupId>me.jakew.javaquiz</groupId>
   <artifactId>JavaQuiz</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 
   <name>JavaQuiz</name>
   <url>https://github.com/jake-walker/JavaQuiz</url>
@@ -58,8 +58,29 @@
           <version>2.22.1</version>
         </plugin>
         <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <configuration>
+            <appendAssemblyId>false</appendAssemblyId>
+            <archive>
+              <manifest>
+                <mainClass>me.jakew.javaquiz.App</mainClass>
+              </manifest>
+            </archive>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+          </configuration>
+        </plugin>
+        <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.1.0</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>me.jakew.javaquiz.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
